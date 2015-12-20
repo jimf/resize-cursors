@@ -16,6 +16,11 @@ Install using npm:
 
 ## Usage
 
+__resize-cursors__ takes cursor positional state relative to a DOM node and
+returns a CSS cursor style that makes sense for that state. States that don't
+imply a resize (i.e., false for all edges), as well as states that don't make
+much sense (e.g., true for three or more edges) return `undefined`.
+
 ```js
 var resizeStyle = require('resize-cursors');
 
@@ -27,11 +32,6 @@ console.log(resizeStyle({ bottom: true, right: true })); // => "nwse-resize"
 console.log(resizeStyle({ top: true, bottom: true, left: true }));
 // => undefined
 ```
-
-__resize-cursors__ takes cursor positional state relative to a DOM node and
-returns a CSS cursor style that makes sense for that state. States that don't
-imply a resize (i.e., false for all edges), as well as states that don't make
-much sense (e.g., true for three or more edges) return `undefined`.
 
 ## Changelog
 
