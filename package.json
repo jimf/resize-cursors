@@ -11,6 +11,9 @@
     "test": "tape test/*.test.js | tap-spec",
     "validate": "npm run lint && npm test && npm run coveralls"
   },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jimf/resize-cursors"
